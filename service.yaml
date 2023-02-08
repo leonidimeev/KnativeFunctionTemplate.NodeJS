@@ -1,0 +1,13 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: THIS_APPLICATION_NAME_INSERTION_POINT
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      - image: docker.io/{username}/THIS_APPLICATION_NAME_INSERTION_POINT
+        env:
+        - name: TARGET
+          value: "Node.js THIS_APPLICATION_NAME_INSERTION_POINT"
